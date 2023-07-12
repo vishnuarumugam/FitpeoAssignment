@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_start_up"
+    app:startDestination="@id/dashboard_fragment">
+
+    <fragment
+        android:id="@+id/dashboard_fragment"
+        android:name="com.example.fitpeoassignment.dashboard.DashboardFragment"
+        android:label="dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/album_details_fragment_action"
+            app:destination="@+id/album_details_fragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/album_details_fragment"
+        android:name="com.example.fitpeoassignment.albumDetails.AlbumDetailsFragment"
+        android:label="dashboard"
+        tools:layout="@layout/fragment_album_details">
+
+
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.fitpeoassignment.dashboard.album.AlbumListAdapterVM"/>
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="@{viewModel::viewAlbum}"
+        android:id="@+id/rl_rating_criteria_row">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_album_details"
+                android:background="@color/white"
+                android:layout_marginVertical="5dp">
+
+
+                <TextView
+                    android:id="@+id/tv_rating_criteria_header"
+                    style="@style/album_header_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="12dp"
+                    android:text="@{viewModel.title}" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/vw_daily_task"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/rl_album_details"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/theme_color_three"/>
+
+    </RelativeLayout>
+</layout>
